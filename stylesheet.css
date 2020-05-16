@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    min-height: 500px; /*stops bottom of page from being stuck behind footer*/
+    min-width: 980px; /*keeps #center div in middle until window is too small, then overflows to scroll*/
+    margin: 0; /*get rid of default margin around whole page*/
+}
+
+header {
+    padding: 8px;
+}
+
+footer {
+    position: fixed; /*line 13 + 14: keep footer at bottom of window always*/
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    padding: 8px;
+}
+
+nav {
+    display: flex;
+    height: 30px;
+    min-width: 700px; /*min width means nav bars will flex down to this size, then overflow to scroll bars*/
+    align-items: center; /*items are vertically centered in flexbox*/
+    justify-content: space-between; /*pushes the two child divs to opposite sides of flexbox*/
+}
+
+.nav-div{
+    display: flex;
+    align-items: center;
+}
+
+#nav-top {
+    font-size: 13px;
+}
+
+#nav-bottom {
+    font-size: 14px;
+    padding-right: 8px;
+}
+
+#app-grid {
+    height: 30px;
+    width: auto;
+}
+
+a {
+    color: black;
+    opacity: 0.75;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#center {
+    display: flex;
+    flex-direction: column; /*default flex direction is row*/
+    padding-top: 110px;
+}
+
+#search-bar-div {
+    margin: auto; /*margin auto is a way of centering a specific item in a flexbox*/
+    display: flex;
+    width: 484px;
+    height: 44px;
+    
+    border: solid grey 3px;
+    border-top-left-radius: 47px; /*radius set to height plus border thickness for semicircle effect*/
+    border-bottom-left-radius: 47px;
+    border-top-right-radius: 47px;
+    border-bottom-right-radius: 47px;
+
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    margin: auto; 
+    width: 387px;
+    height: 34px;
+    font: 16px arial, sans-serif;
+    border: none;
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+#logo, #main-buttons {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#mag {
+    position: absolute; /*pos abs makes this item irrelevant to other flexbox item positioning*/
+    height: 20px;
+    width: 20px;
+    padding-left: 10px;
+    padding-top: 10px;  
+}
+
+#sign-in-button {
+    height: 28px;
+    width: 68px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: rgb(82, 121, 228);
+
+    color: white;
+    font-weight: bold;
+}
+
+#search-button, #lucky-button {
+    height: 36px;
+    width: 143px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: lightgrey;
+
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+#search-button:hover, #lucky-button:hover, #sign-in-button:hover {
+    cursor: pointer;
+    opacity: 1;
+    border: 1px;
+    border-color: rgba(211, 211, 211, 0.562);
+    box-shadow: 0 2px 1px rgba(211, 211, 211, 0.562);
+}
